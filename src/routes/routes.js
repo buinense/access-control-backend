@@ -8,6 +8,7 @@ const swaggerUi = require("swagger-ui-express"); */
 const ingresoRoute = require("../components/ingreso/ingreso.route");
 const indicadoresRoute = require("../components/indicadores/indicadores.route");
 const registrosRoute = require("../components/registros/registros.route");
+const hidrocoolerRoute = require("../components/hidrocooler/hidrocooler.route");
 
 function routes(app) {
 	//app.use(`${globalPathPrefix}/bff-docs`, swaggerUi.serve, swaggerUi.setup(swaggerDocument));
@@ -17,6 +18,8 @@ function routes(app) {
 	indicadoresRoute(app, globalPathPrefix);
 
 	registrosRoute(app, globalPathPrefix);
+
+	hidrocoolerRoute(app, globalPathPrefix);
 }
 
 module.exports = { routes };
